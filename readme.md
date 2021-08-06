@@ -1,56 +1,38 @@
 1. Adding changes to the last commit
 
+Setup
 ```
 echo "that last line I forgot" >> filename1.txt
-
-git commit -am "new message" --amend 
-
-# or without the message
-
-git commit -a --amend --no-edit
 ```
 
+How can you add this change to already created commit?
+And without changing the 
 What if the last commit was pushed? 
 Can you push changes now?
 
-2. Interactive rebase - squash
+2. Removing current changes
 
 Setup
 ```
-git checkout -b rebase-example
-
-echo "file that gets the job done" > somefile.txt
-git add somefile.txt
-git commit -m "Add file doing some important work"
-
-
-# moment of realization
-
-echo "oops, file I forgot to add" > forgottenfile.txt
-git add forgottenfile.txt
-git commit -am "Add the forgotten file"
-
-
-# moment of realization no 2
-
-echo "Ok, I promise this is the last one" > lastfile.txt
-git add lastfile.txt
-git commit -am "Add the last file"
-
-
-# see history
-
-git log --oneline
+echo "A brand new file which is not tracked yet" > newfile.txt
+echo "new changes to already tracked file" >> somefile.txt
 ```
+
+How to remove all changes we've done to tracked files? And untracked?
+
+3. Setting HEAD back - Completely removing commit
+
+How to disregard a number of commits and change HEAD pointer?
+What happens what you push such changes?
+
+4. Undoing all commits that came from a merge
+
+How to properly undo all of the commits from a branch?
+
+5. Interactive rebase - squash
 
 History is messy - one feature is spread across multiple changes
+How to merge a number of commits into one?
 
-**Squashing** is used to merge commits into another. We can merge our last commits into previous one.
-
-```
-git rebase -i master
-```
-
-3. Interactive rebase - squash with conflict
-4. Interactive rebase - stoping for amends
-5. Hard resets
+6. Interactive rebase - squash with conflict
+7. Interactive rebase - stoping for amends
