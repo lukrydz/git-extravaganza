@@ -6,9 +6,15 @@ echo "that last line I forgot" >> filename1.txt
 ```
 
 How can you add this change to already created commit?
+
+Yes, using Git amend.
+
+
 And without changing the 
 What if the last commit was pushed? 
 Can you push changes now?
+
+No, it says branch is behind remote.
 
 2. Removing current changes
 
